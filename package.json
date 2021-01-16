@@ -1,0 +1,25 @@
+{
+  "name": "cdn",
+  "version": "1.0.0",
+  "description": "A Decentralised Content Delievery Network",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "shdkpr2008",
+  "license": "GNU",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "http2": "^3.3.7",
+    "socket.io": "^2.2.0",
+    "websocket": "^1.0.28",
+    "wrtc": "^0.3.7",
+    "ws": "^6.2.1"
+  },
+  "optionalDependencies": {
+    "bufferutil": "^4.0.1",
+    "utf-8-validate": "^5.0.2"
+  }
+}

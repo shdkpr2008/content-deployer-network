@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <script>window.dCDN = {"debug": true}</script>
+    <script id="dcdn">
+        (function (a, b, f, g) {
+            var c = /(; |#|&|^)dcdn=(\d)/.exec(location.hash + "; " + a.cookie);
+            if (!c || !c[2] || +c[2]) {
+                var d = a.createElement("script"),
+                    e = function () {
+                        d.src = g;
+                        var b = a.getElementsByTagName("script"),
+                            c = b[0];
+                        c.parentNode.insertBefore(d, 1 < b.length ? c.nextSibling : c)
+                    };
+                f() ? (a.write('<plaintext style="display:none">'), setTimeout(function () {
+                    b.dCDN || (b.dCDN = {});
+                    b.dCDN.cap = !0;
+                    d.onerror = function () {
+                        a.cookie = "dcdn=0; expires=" + (new Date(Date.now() + 18E5)).toGMTString() + "; path=/";
+                        b.location = b.location.href
+                    };
+                    e()
+                }, 0)) : e()
+            }
+        })(document, window, function () {
+            var a = /webkit|msie\s10|(firefox)[\/\s](\d+)|(opera)[\s\S]*version[\/\s](\d+)|3ds/i.exec(navigator.userAgent);
+            return !a || a[1] && 4 > +a[2] || a[3] && 11 > +a[4] ? !1 : !0
+        }, "cdn.js");
+    </script>
+    <meta charset="utf-8">
+    <title>dCDN Demo</title>
+</head>
+<body>
+<div id="container">
+    <h1>CDN</h1>
+
+    <h3 class="download-msg">Download a file:</h3>
+
+    <a class="button tiny" href="earth-large.jpg" download="earth-large.jpg">
+        <p>earth-large.jpg</p>
+    </a>
+
+    <a class="button tiny" href="earth-small.jpg" download="earth-small.jpg">
+        <p>earth-small.jpg</p>
+    </a>
+
+    <img class="button small" data-dcdn-src="earth-small.jpg" download="earth-small.jpg"/>
+</div>
+</body>
+</html>
