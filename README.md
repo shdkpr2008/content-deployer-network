@@ -6,11 +6,12 @@ A peer-to-peer content delivery network.
 This is the central controller more like a torrent tracker used to track seeds and peers.
 
 ### Dom Script
-This script is responsible to trigger socket events on page initilization.
+This script is responsible to trigger socket events on web page.
 
 ## Requirements
 1. NodeJS
-2. WebRTC Enabled Browser
+2. MongoDB
+3. WebRTC enabled browser
 
 ## Usage
 ```
